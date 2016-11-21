@@ -1,0 +1,17 @@
+
+<div ng-init="load()">
+<form>
+    <button  ng-click="sortbyname()">sort by name</button>
+    <button ng-click="sortbyscore()">sort by score</button>
+</form>
+<p>
+    <ul style="list-style:none">
+        <li ng-repeat="player in players">
+            <span style="font-size:20px"><strong>Name:</strong>{{player.name}}</span><br>
+                <strong>Score:</strong>{{player.score}}
+        </li>
+    </ul>
+</p>
+</div>
+ 
+

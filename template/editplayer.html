@@ -1,0 +1,18 @@
+<p>
+    <ul style="list-style:none">
+        <li ng-repeat="player in players">
+            <span style="font-size:20px"><strong>Name:</strong>{{player.name}}</span><br>
+            <strong>Score:</strong>{{player.score}}
+            <section ng-init="edit=0">
+                <button ng-click="edit=1" ng-hide="edit===1">Edit Score</button>
+                    <form ng-show="edit===1" ng-submit="editPlayer(player,score)" novalidate>
+                        <input type="number" ng-model="score" required/>
+                        <input ng-click="edit=0" type="submit"/>
+                    </form>
+                    <form ng-submit="deletePlayer(player)">
+                        <input type="submit" value="delete"/>
+                    </form> 
+            </section>
+        </li>
+    </ul>
+</p>
