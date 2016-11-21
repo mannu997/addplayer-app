@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html ng-app="add-player">
+    <head>
+    <style>
+        .header{
+            padding-left:200px;
+            padding-top:50px;
+        }
+        #home , #addplayer , #editplayer{
+            display:inline-block;
+        }
+        #addplayer{
+            margin-left:20px;
+        }
+        #editplayer{
+            margin-left:20px;
+        }
+    </style>
+    </head>
+  
+    <body >
+        
+        <div class = "header">
+            <div id="home">
+                <a href="#/listing">listing</a>
+            </div>
+
+            <div id = "addplayer">
+                <a href="#/addplayer">add player</a>
+            </div>
+
+            <div id  = "editplayer">
+                <a href = "#/editplayer"> edit player</a>
+            </div>
+        </div>
+        <div class = "content">
+            <ng-view></ng-view>
+        </div>
+
+        
+    </body>
+        <script type="text/javascript" src="scripts/angular.min.js"></script>
+        <script type="text/javascript" src="scripts/angular-route.min.js"> </script>
+        <script type = "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+        <script type="text/javascript" src="scripts/app.js"></script>
+        <script type = "text/javascript" src="scripts/controllers/LeaderboardCtrl.js"></script>
+</html>
